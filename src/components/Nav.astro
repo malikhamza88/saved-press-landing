@@ -1,18 +1,17 @@
 ---
-const baseUrl = import.meta.env.BASE_URL;
 ---
 <nav class="fixed w-full z-50 bg-paper/80 backdrop-blur-md shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="flex-shrink-0">
-        <span class="text-2xl font-serif font-bold text-primary-dark">Saved Press</span>
+        <a href="/saved-press-landing/" class="text-2xl font-serif font-bold text-primary-dark">Saved Press</a>
       </div>
 
       <div class="hidden md:flex items-center space-x-8">
         <a href="#features" class="text-text hover:text-primary">Features</a>
         <a href="#how-it-works" class="text-text hover:text-primary">How it Works</a>
-        <a href={`${baseUrl}privacy-policy`} class="text-text hover:text-primary">Privacy Policy</a>
-        <a href={`${baseUrl}terms`} class="text-text hover:text-primary">Terms</a>
+        <a href="/saved-press-landing/privacy-policy/" class="text-text hover:text-primary">Privacy Policy</a>
+        <a href="/saved-press-landing/terms/" class="text-text hover:text-primary">Terms</a>
         <a href="#download" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-colors">
           Download Now
         </a>
@@ -30,8 +29,8 @@ const baseUrl = import.meta.env.BASE_URL;
     <div class="px-2 pt-2 pb-3 space-y-1">
       <a href="#features" class="block px-3 py-2 text-text hover:text-primary">Features</a>
       <a href="#how-it-works" class="block px-3 py-2 text-text hover:text-primary">How it Works</a>
-      <a href={`${baseUrl}privacy-policy`} class="block px-3 py-2 text-text hover:text-primary">Privacy Policy</a>
-      <a href={`${baseUrl}terms`} class="block px-3 py-2 text-text hover:text-primary">Terms</a>
+      <a href="/saved-press-landing/privacy-policy/" class="block px-3 py-2 text-text hover:text-primary">Privacy Policy</a>
+      <a href="/saved-press-landing/terms/" class="block px-3 py-2 text-text hover:text-primary">Terms</a>
       <a href="#download" class="block px-3 py-2 bg-primary text-white rounded-full text-center mt-4">
         Download Now
       </a>
