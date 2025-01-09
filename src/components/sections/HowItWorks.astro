@@ -1,0 +1,44 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Save Content",
+    description: "Use the share button in any app to save articles, posts, or links to Saved Press",
+    image: "/save-content.png"
+  },
+  {
+    number: "02",
+    title: "Weekly Compilation",
+    description: "Every Monday, we compile your saved content into a beautiful newspaper format",
+    image: "/compile.png"
+  },
+  {
+    number: "03",
+    title: "Read & Enjoy",
+    description: "Access your personalized newspaper anytime, anywhere on your iOS device",
+    image: "/read.png"
+  }
+];
+---
+
+<section id="how-it-works" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900">How It Works</h2>
+      <p class="mt-4 text-xl text-gray-600">Three simple steps to transform your reading experience</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-12">
+      {steps.map((step) => (
+        <div class="relative">
+          <div class="text-8xl font-bold text-gray-200 absolute -top-10 left-0">{step.number}</div>
+          <div class="relative bg-white rounded-2xl shadow-lg p-8">
+            <img src={step.image} alt={step.title} class="w-full h-48 object-cover rounded-lg mb-6" />
+            <h3 class="text-2xl font-bold text-gray-900">{step.title}</h3>
+            <p class="mt-2 text-gray-600">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

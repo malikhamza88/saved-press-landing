@@ -1,0 +1,68 @@
+---
+const testimonials = [
+  {
+    name: "Alex Thompson",
+    role: "Tech Journalist",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    content: "Saved Press is a game-changer. I read hundreds of articles weekly, and this app finally gives me a way to organize and revisit the most important ones.",
+    rating: 5
+  },
+  {
+    name: "Maria Santos",
+    role: "UX Designer",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+    content: "The interface is incredibly intuitive, and I love how it transforms my saved articles into a beautiful newspaper format. It's like having my personal magazine.",
+    rating: 5
+  },
+  {
+    name: "David Chen",
+    role: "Product Manager",
+    image: "https://randomuser.me/api/portraits/men/85.jpg",
+    content: "Finally found an app that helps me keep track of all the industry news and articles I save throughout the week. The Monday digest is now part of my routine.",
+    rating: 5
+  },
+  {
+    name: "Sophia Patel",
+    role: "Research Analyst",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    content: "As someone who needs to stay updated with market trends, this app has become indispensable. The weekly format helps me stay organized and informed.",
+    rating: 5
+  }
+];
+---
+
+<section class="py-24 bg-paper">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-serif font-bold text-text">What Our Users Say</h2>
+      <p class="mt-4 text-xl text-text-secondary">Join thousands of satisfied readers who've transformed their reading experience</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {testimonials.map((testimonial) => (
+        <div class="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow border border-primary/10">
+          <div class="flex items-center mb-6">
+            <img
+              src={testimonial.image}
+              alt={testimonial.name}
+              class="w-12 h-12 rounded-full object-cover border-2 border-primary"
+              loading="lazy"
+            />
+            <div class="ml-4">
+              <h3 class="font-serif font-semibold text-text">{testimonial.name}</h3>
+              <p class="text-sm text-text-secondary">{testimonial.role}</p>
+            </div>
+          </div>
+          <div class="flex mb-4">
+            {[...Array(testimonial.rating)].map(() => (
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="text-text-secondary line-clamp-4">{testimonial.content}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

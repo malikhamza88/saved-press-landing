@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+---
+
+<Layout>
+  <Nav />
+  <main>
+    <Hero />
+    <Features />
+    <HowItWorks />
+    <Testimonials />
+    <footer class="bg-gray-50 py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="flex justify-center space-x-6">
+          <a href="/privacy-policy" class="text-gray-600 hover:text-gray-900">Privacy Policy</a>
+          <a href="/terms" class="text-gray-600 hover:text-gray-900">Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
